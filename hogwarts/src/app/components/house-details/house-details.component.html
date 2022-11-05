@@ -1,0 +1,28 @@
+<div class="page">
+  <button class="close" mat-button [mat-dialog-close]="true">X</button>
+  <div class="row page">
+    <div class="col-lg-6">
+      <img [src]="house.houseImage" alt="" />
+    </div>
+    <div class="col-lg-6">
+      <h1>{{ house.houseName }}</h1>
+      <p class="bold">Founded By:</p>
+      <p>{{ house.foundedBy }}</p>
+      <br />
+      <p class="bold">House Ghost:</p>
+      <p>{{ house.houseGhost }}</p>
+      <br />
+      <p class="bold">House Symbol:</p>
+      <p>{{ house.houseSymbol }}</p>
+      <br />
+      <p class="bold">House Colour:</p>
+      <p>{{ house.houseColour }}</p>
+      <br />
+      <p class="bold">Description:</p>
+      <p>{{ house.description }}</p>
+      <br />
+      <p class="bold">Common Room:</p>
+      <p>{{ house.commonRoom }}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,61 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false"
+  >
+    <!-- <mat-toolbar>Menu</mat-toolbar> -->
+    <mat-nav-list>
+      <button mat-button [routerLink]="['']">Home</button>
+      <button mat-button [routerLink]="['/typicalSchoolYear']">
+        Typical School Year
+      </button>
+      <button mat-button [routerLink]="['/staff']">Hogwarts Staff</button>
+      <button mat-button [routerLink]="['/houses']">Hogwarts Houses</button>
+      <button mat-button [routerLink]="['/dumbledoreArmy']">
+        Dumbledore's Army
+      </button>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async"
+      >
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <a href="#"><span>Hogwarts</span></a>
+      <div class="buttons">
+        <button
+          class="toolbarButton"
+          mat-button
+          [routerLink]="['/typicalSchoolYear']"
+        >
+          Typical School Year
+        </button>
+        <button class="toolbarButton" mat-button [routerLink]="['/staff']">
+          Hogwarts Staff
+        </button>
+        <button class="toolbarButton" mat-button [routerLink]="['/houses']">
+          Hogwarts Houses
+        </button>
+        <button
+          class="toolbarButton"
+          mat-button
+          [routerLink]="['/dumbledoreArmy']"
+        >
+          Dumbledore's Army
+        </button>
+      </div>
+    </mat-toolbar>
+    <ng-content></ng-content>
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,50 @@
+<mat-form-field class="example-full-width" appearance="fill">
+  <mat-label>First Name</mat-label>
+  <input
+    matInput
+    type="text"
+    [(ngModel)]="student.firstName"
+    ngDefaultControl
+    #firstName="ngModel"
+    required
+    autocomplete="off"
+  />
+</mat-form-field>
+<div *ngIf="firstName.invalid && firstName.dirty" class="alert alert-danger">
+  First Name is required.
+</div>
+
+<mat-form-field class="example-full-width" appearance="fill">
+  <mat-label>Last Name</mat-label>
+  <input
+    matInput
+    type="text"
+    [(ngModel)]="student.lastName"
+    ngDefaultControl
+    #lastName="ngModel"
+    required
+    autocomplete="off"
+  />
+</mat-form-field>
+<div *ngIf="lastName.invalid && lastName.dirty" class="alert alert-danger">
+  Last Name is required.
+</div>
+
+<mat-form-field appearance="fill">
+  <mat-label>House</mat-label>
+  <mat-select [(ngModel)]="student.house"  (blur)="slytherinCheck($event)">
+    <mat-option *ngFor="let house of houses" [value]="house" ngDefaultControl>
+      {{ house }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<div *ngIf="slytherin" class="alert alert-danger">
+  Slytherins not allowed to join.
+</div>
+
+<div>
+  <button mat-button (click)="addStudent()" [disabled]="firstName.invalid || lastName.invalid">
+    Join
+  </button>
+  <button mat-button [mat-dialog-close]="true">Cancel</button>
+</div>

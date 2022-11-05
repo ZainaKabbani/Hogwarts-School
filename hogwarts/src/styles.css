@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Lobster&family=PT+Serif:ital&family=Berkshire+Swash,wght@1,700&family=Quicksand:wght@300&display=swap");
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+mat-dialog-container {
+  background: #383838 !important;
+}

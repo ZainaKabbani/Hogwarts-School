@@ -1,0 +1,23 @@
+img {
+  width: 200px;
+  height: 200px;
+  margin-top: 7%;
+ 
+  
+  
+}
+
+.row {
+  margin: 0%;
+  background-color: #383838;
+  padding: 5%;
+
+}
+.dialog {
+  background-color: #383838;
+}
+
+.imageDiv{
+  display: flex;
+  justify-content: center;
+}

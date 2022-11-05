@@ -1,0 +1,15 @@
+table {
+  /* margin-top: 2%; */
+  width: 100%;
+}
+
+.join{
+  margin: 2% 5%;
+  background-color: #383838;
+  color: #F2F2F2;
+  float: right;
+}
+
+.filter{
+  padding-left: 1%;
+}

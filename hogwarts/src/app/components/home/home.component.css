@@ -1,0 +1,50 @@
+h1{
+    margin-top: 10%;
+    text-align: center;
+    font-size: 3.2rem;
+    line-height: 2;
+    font-family: lobster;
+    color: #F2F2F2;
+}
+
+p{
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 10%;
+    color: #F2F2F2;
+}
+
+img{
+    margin-left: 15%;
+}
+
+.header{
+    background-color: #383838;
+    padding-bottom: 10.5%;
+    padding-top: 2%;
+}
+
+.row{ 
+    margin: 0;
+}
+
+
+@media (max-width: 991px) {
+
+    img{
+       margin-left: auto;
+       margin-right: auto;
+       display: block;
+       margin-top: 5%;
+    }
+    
+}
+
+
+@media (max-width:411px) {
+    img{
+        width: 300px;
+        height: 300px;
+    }
+    
+}
